@@ -3,6 +3,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 26
+    compileOptions {
+        kotlinOptions.freeCompilerArgs += ['-module-name', application_id]
+    }
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 26
